@@ -1,3 +1,4 @@
+
 {% extends "blog_app/index.html" %}
 
 {% load static %}
@@ -10,6 +11,20 @@
 
 {% block contenido_que_cambia %}
 
-<h1>ESTE ES EL CONTENIDO QUE CAMBIÓ</h1>
+<h1>Ingresá tu posteo</h1>
+
+
+<form action="/blog_app/blogformulario" mathod="POST" > {% csrf_token %}
+
+    <p>Titulo= <input type="text" name="titulo"></p>
+    <p>Subtitulo= <input type="text" name="subtitulo"></p>
+    <p>Cuerpo= <input type="text" name="cuerpo"></p>
+    <p>Autor= <input type="text" name="autor"></p>
+
+    <input type="submit" value="Enviar">
+    
+</form>
 
 {% endblock %}
+
+
