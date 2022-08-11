@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Landing Page - Start Bootstrap Theme</title>
+        <title>Crossfit News</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -22,7 +22,8 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'home' %}">CrossFit News</a>
-                <a class="btn btn-primary" href="#signup">Registrate</a>
+                <a class="btn btn-light" href="{% url 'register' %}">Registrate</a>
+                <a class="btn btn-light" href="{% url 'login' %}">Log in</a>
             </div>
         </nav>
         <!-- Masthead-->
@@ -81,6 +82,17 @@
 
         {% endblock %}
 
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Titulo del post</h5>
+              <p class="card-text">contenido.</p>
+              <a href="{% url 'login' %}" class="btn btn-primary">Leer más</a>
+            </div>
+          </div>
+
+          
+
 
         <!-- Icons Grid-->
         <section class="features-icons bg-light text-center">
@@ -118,24 +130,12 @@
                 <div class="row g-0">
                     <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <a href="{% url 'form' %}"><h2>Creá nuevo entrada</h2></a> 
+                        <a href="{% url 'blogformulario' %}"><h2>Creá nuevo entrada</h2></a> 
                         <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
                     </div>
                 </div>
-                <div class="row g-0">
-                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
-                    <div class="col-lg-6 my-auto showcase-text">
-                        <h2>Updated For Bootstrap 5</h2>
-                        <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!</p>
-                    </div>
-                </div>
-                <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-3.jpg')"></div>
-                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Easy to Use & Customize</h2>
-                        <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
-                    </div>
-                </div>
+                
+                
             </div>
         </section>
         <!-- Testimonials-->
